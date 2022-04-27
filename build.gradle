@@ -23,17 +23,8 @@ compileJava {
     options.release = 17
 }
 
-//application {
-//    mainClass = 'hexlet.code.App'
-//}
-
 dependencies {
-    implementation 'info.picocli:picocli:4.6.2'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.4'
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.11.2'
-
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter:5.7.0'
-
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
 }
 

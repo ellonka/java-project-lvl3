@@ -1,4 +1,11 @@
 package hexlet.code;
 
-public class Validator {
+import hexlet.code.schemas.StringSchema;
+
+public final class Validator {
+    //Schema schema;
+
+    public StringSchema string() {
+        return new StringSchema();
+    }
 }
