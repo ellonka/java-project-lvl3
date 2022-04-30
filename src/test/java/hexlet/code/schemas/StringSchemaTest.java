@@ -1,14 +1,20 @@
-package hexlet.code;
+package hexlet.code.schemas;
 
-import hexlet.code.schemas.StringSchema;
+import hexlet.code.Validator;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StringSchemaTest {
-    private Validator v = new Validator();
+class StringSchemaTest {
     private final int magicNumber = 30;
+    private static Validator v;
+
+    @BeforeAll
+    static void beforeAll() {
+        v = new Validator();
+    }
 
     @Test
     public void testEmptyRuleSchema() {

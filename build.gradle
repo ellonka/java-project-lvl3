@@ -7,7 +7,7 @@
 plugins {
     id 'com.github.ben-manes.versions' version '0.39.0'
     id 'com.adarshr.test-logger' version '3.2.0'
-    id 'application'
+    id 'java'
     id 'checkstyle'
     id 'jacoco'
 }

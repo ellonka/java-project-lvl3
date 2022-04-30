@@ -9,7 +9,7 @@ public final class StringSchema implements Schema {
     private StringBuilder strToCompare;
 
     @Override
-    public <T> boolean isValid(T parameter) {
+    public boolean isValid(String parameter) {
         for (String rule: rules) {
             if (rule.equals("required")) {
                 if (parameter == null || parameter.equals("")) {
