@@ -24,15 +24,17 @@ compileJava {
 }
 
 dependencies {
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter:5.7.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
 }
 
 test {
     useJUnitPlatform()
+    finalizedBy jacocoTestReport
 }
 
 jacocoTestReport {
+    dependsOn test
     reports {
         xml.required = true
     }

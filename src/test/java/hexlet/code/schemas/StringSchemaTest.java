@@ -59,5 +59,4 @@ class StringSchemaTest {
         assertFalse(schema.required().minLength(2).contains("smile").isValid("keep smiling"));
         assertTrue(schema.required().minLength(2).contains("keep").isValid("keep smiling"));
     }
-
 }
