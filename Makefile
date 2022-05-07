@@ -1,4 +1,4 @@
-install:
+clean:
 	./gradlew clean
 
 check-updates:

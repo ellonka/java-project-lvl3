@@ -23,14 +23,22 @@ compileJava {
     options.release = 17
 }
 
+jacoco {
+    toolVersion = "0.8.8"
+}
+
 dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter:5.8.2'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
 }
 
 test {
-    useJUnitPlatform()
     finalizedBy jacocoTestReport
+    useJUnitPlatform()
+}
+
+testlogger {
+    showStandardStreams true
 }
 
 jacocoTestReport {
@@ -38,8 +46,4 @@ jacocoTestReport {
     reports {
         xml.required = true
     }
-}
-
-testlogger {
-    showStandardStreams true
 }
