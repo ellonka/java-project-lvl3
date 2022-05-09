@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StringSchemaTest {
-    private final int magicNumber = 30;
+    private final int NUMBER = 30;
     private static Validator v;
 
     @BeforeAll
@@ -45,7 +45,7 @@ class StringSchemaTest {
     public void testMinLengthRuleSchema() {
         StringSchema schema = v.string();
         assertTrue(schema.minLength(2).isValid("keep smiling"));
-        assertFalse(schema.minLength(magicNumber).isValid("keep smiling"));
+        assertFalse(schema.minLength(NUMBER).isValid("keep smiling"));
     }
 
     @Test
@@ -55,7 +55,7 @@ class StringSchemaTest {
         assertFalse(schema.minLength(0).isValid(null));
         assertTrue(schema.isValid(""));
         assertFalse(schema.required().minLength(0).isValid(""));
-        assertFalse(schema.required().minLength(magicNumber).contains("keep").isValid("keep smiling"));
+        assertFalse(schema.required().minLength(NUMBER).contains("keep").isValid("keep smiling"));
         assertFalse(schema.required().minLength(2).contains("smile").isValid("keep smiling"));
         assertTrue(schema.required().minLength(2).contains("keep").isValid("keep smiling"));
     }
