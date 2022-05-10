@@ -10,7 +10,9 @@ public class App {
 //        System.out.println(schema.minLength(2).isValid("dfefewf"));
 //        System.out.println(schema.minLength(0).isValid("h"));
 //        System.out.println(schema.contains("smile").isValid("keep smiling"));
-        System.out.println(schema.contains("keep").isValid("keep smiling"));
-        System.out.println(schema.contains("smile").isValid("keep smiling"));
+//        System.out.println(schema.contains("keep").isValid("keep smiling"));
+//        System.out.println(schema.contains("smile").isValid("keep smiling"));
+//        Integer good;
+//        System.out.println(good instanceof Integer);
     }
 }
