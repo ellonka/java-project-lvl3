@@ -47,14 +47,4 @@ class StringSchemaTest {
         assertTrue(schema.minLength(2).isValid("keep smiling"));
         assertFalse(schema.minLength(thirty).isValid("keep smiling"));
     }
-
-    @Test
-    public void testRulesJoinSchema() {
-        StringSchema schema = v.string();
-        assertTrue(schema.minLength(2).isValid("keep smiling"));
-        assertFalse(schema.minLength(0).isValid(null));
-        assertFalse(schema.isValid(""));
-        assertTrue(schema.contains("keep").isValid("keep smiling"));
-        assertFalse(schema.contains("smile").isValid("keep smiling"));
-    }
 }
